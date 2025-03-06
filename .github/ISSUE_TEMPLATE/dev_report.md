@@ -1,38 +1,27 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Develop Note
+about: Create a report to document develpment status
 title: ''
 labels: ''
 assignees: ''
 
 ---
 
-## Describe the bug ( 이슈상황 묘사 )
-A clear and concise description of what the bug is.
+## 제목
+=> 20250306 DevNote
 
-## To Reproduce ( 재현 시나리오 )
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+## 목표
+이번달 목표 및 개발목표 등
 
-## Expected behavior ( 예상결과 )
-A clear and concise description of what you expected to happen.
+## 작업내역
 
-## Screenshots
-If applicable, add screenshots to help explain your problem.
-
-## Environment ( 개발환경 ): 
- - OS: [e.g. iOS]
- - Version [e.g. 22]
-등등
-
-## Smartphone ( 테스트환경 ):
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Version [e.g. 22]
-등등 
-
-## Additional context ( 추가사항 )
-Add any other context about the problem here.
+Ex)
+* 홈화면
+  * CRUD API 구현완료
+* 프로젝트
+  * NOT FOUND 에러 수정 
+  
+## 협의사항
+EX) 
+* 홈화면
+  * 요청 Header에 Token 필요여부  
