@@ -5,8 +5,12 @@ plugins {
 }
 
 group = 'com.devcrew1os'
-version = '0.5'
+version = '1.0.0'
 sourceCompatibility = '11'
+
+bootJar {
+    archiveFileName = 'todopangServer.jar'
+}
 
 configurations {
     compileOnly {
@@ -25,11 +29,15 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     implementation 'org.springframework.boot:spring-boot-configuration-processor'
 
-    // firebase
+    // Firebase
     implementation 'com.google.firebase:firebase-admin:8.1.0'
 
-    // Database
+    // Database(PostgreSQL)
     implementation 'org.postgresql:postgresql:42.3.8'
+
+    // Redis(7.0)
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.1'
 
     // Lombok
     compileOnly 'org.projectlombok:lombok'
