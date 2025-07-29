@@ -2,8 +2,6 @@ package com.devcrew1os.service.main.challenge;
 
 import com.devcrew1os.common.enums.ErrorCode;
 import com.devcrew1os.dto.main.challenge.*;
-import com.devcrew1os.entity.challenge.Category;
-import com.devcrew1os.entity.challenge.Challenge;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -56,7 +54,7 @@ public class ChallengeService {
         if(!isRequestValid(userId, req, res)) return res;
 
         try {
-            ChallengeDetailData data = transaction.getChallengeDetailProcess(req.getChallengeId());
+            ChallengeDetailData data = transaction.getChallengeDetailProcess(userId, req.getChallengeId());
             res.setData(data);
             res.setSuccess(true);
             res.addMessage("[Info] Successfully fetch challenge detail");
@@ -89,7 +87,6 @@ public class ChallengeService {
             return false;
         }
         res.addMessage("[Success] Valid get challenge detail request");
-        logger.info("[ChallengeService][{}] Valid get challenge detail request", userId);
         return true;
     }
 
@@ -109,7 +106,6 @@ public class ChallengeService {
             } else {
                 res.setSuccess(true);
                 res.addMessage("[Info] Successfully registered challenge data");
-                logger.info("[ChallengeService][{}] Successfully register challenge data", userId);
                 return res;
             }
 
@@ -144,7 +140,6 @@ public class ChallengeService {
             return false;
         }
         res.addMessage("[Success] Todo register request is valid");
-        logger.info("[ChallengeService][{}] Todo register request is valid", userId);
         return true;
     }
 }
